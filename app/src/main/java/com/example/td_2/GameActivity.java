@@ -2,6 +2,7 @@ package com.example.td_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -101,6 +102,12 @@ public class GameActivity extends AppCompatActivity {
             mChansText.setText(chans + " chans");
             // Display a short message
             Toast.makeText(this, "Lèt ou tape a, pa nan mo a", Toast.LENGTH_SHORT).show();
+            if (chans == 0){
+                Intent gameIntent = new Intent(GameActivity.this,
+                        MainActivity.class);
+                startActivity(gameIntent);
+                Toast.makeText(this, "Malerezman, ou pa jwenn mo a.", Toast.LENGTH_SHORT).show();
+            }
         }
 
         // Finally, display the new text.
