@@ -92,7 +92,6 @@ public class GameActivity extends AppCompatActivity {
             while(index >= 0){
                 // This is just a hack to convert the string to char, since moKache is an array of characters
                 moKache[index] = letter.charAt(0); // chartAt(0) to take the first character from the letter.
-
                 index = chosenWord.indexOf(letter, index + 1); // DO NOT forget to specify the fromIndex to avoid infinite loop
             }
             System.out.println(moKache);
